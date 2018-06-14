@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Systemy_mobilne_haslo</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="text_loading">Loading</string>
+    <string name="text_haslo">Podaj hasło</string>
+    <string name="text_odszyf">Twoja wiadomość</string>
+    <string name="text_message">Wpisz tekst wiadomości</string>
+    <string name="Button_message">Enter</string>
+    <string name="title_activity_ciepher_service">CiepherService</string>
+</resources>
