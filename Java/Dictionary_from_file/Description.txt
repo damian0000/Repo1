@@ -1,0 +1,1 @@
+A program that loads part of the data from a text file. After loading the data, it waits for the correct user response
