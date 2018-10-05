@@ -1,1 +1,0 @@
-Program zapisuj¹cy dane do bazy danych.

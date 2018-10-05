@@ -1,0 +1,1 @@
+Search engine on the website. searches real estate offers from the database, according to the type, kind and location.

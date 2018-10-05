@@ -1,1 +1,0 @@
-Program zapisuj¹cy dane pracowników z pól foprmularza do pliku tekstowego.
