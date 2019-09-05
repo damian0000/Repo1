@@ -1,0 +1,170 @@
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background: url("../images/jumbotron.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+.title_header
+{
+  color: white;
+}
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+.title_product
+{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  color: blue;
+  padding: 2px;
+
+}
+.price_product
+{
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 20px;
+  color: blue;
+  padding: 3px;
+}
+.title_price_product_most
+{
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: blue;
+  text-align: text-center;
+}
+.price_product_most
+{
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+.description_most
+{
+  font-size: 14px;
+  letter-spacing: 1px;
+  
+
+}
+#button-group {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.col-md-4
+{
+  height: 350px;
+}
+hr
+{
+  border: 0px; 
+  background: blue; 
+  height: 1px;
+}
+s
+{
+  color: red;
+  height: 3px;
+}
+
+.search_center
+{
+  display: flex;
+    align-items : center;
+    justify-content: center;
+}
+/*------------------------------basket------------------------------------*/
+.product_basket
+{
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 3px 3px #bfbfbf;
+}
+
+.total_basket {
+    border:1px solid;
+    border-collapse:collapse;
+    border-spacing:2px;
+    padding:5px;
+     margin: 0 auto !important;
+  }
+  .total_basket th {
+    border:1px solid;
+    padding:5px;
+    color: #fff;
+    font-size: 16px;
+    background:#286090;
+    border-color: #204d74;
+    width: 100px;
+  }
+
+/*--------------------------------------------edit----------------------------------------------------*/
+.form
+{
+    display: flex;
+    align-items : center;
+    justify-content: center;
+}
+
+.form_edit{
+    background: #fff;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 3%;
+    font-size: 16px;
+    width: 100%;
+    display:inline-block;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+  .contact-form label{
+    font-weight:600;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+#formEdit
+{
+  width: 700px;
+}
+
+.form_text_span
+{
+  text-align:center;
+  color: red;
+  font-size: 16px;
+}
+
+.one_product_image
+{
+  height: 200px;
+}
+
