@@ -33,6 +33,8 @@ if (typeof jQuery == 'undefined') {
 }
 </script>
 
+<script src="users/Model/Functions/js_function.js" async></script>
+
 <?php require_once $abs_us_root.$us_url_root.'usersc/includes/bootstrap_corrections.php'; ?>
 </head>
 <body class="nav-md">

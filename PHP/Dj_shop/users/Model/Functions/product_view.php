@@ -7,9 +7,11 @@ function products_view($result)
 	?>
 			<div class="col-12 col-md-4">
 				<h3 class="title_product"><?php echo $record->name; ?></h3>
-				<?php
-					echo "<img src='../users/images/products/$record->image' class='img-responsive center-block'/>";
-				?>
+				<div class="thumbnails">
+					<?php
+						echo "<img src='../users/images/products/$record->image' class='img-responsive center-block'/>";
+					?>
+				</div>
 				<p class="price_product">Cena: <?php echo $record->price; ?>zł</p>
 				<div class="btn-group" id="button-group">
 				    <a href="most.php?id=<?php echo $record->id; ?>"  class="btn btn-primary ">Szczegóły</a>
@@ -26,9 +28,11 @@ function products_view_promotion($result)
 	?>
 			<div class="col-12 col-md-4">
 				<h3 class="title_product"><?php echo $record2->name; ?></h3>
-				<?php
-					echo "<img src='../users/images/products/$record2->image' class='img-responsive center-block'/>";
-				?>
+				<div class="thumbnails">
+					<?php
+						echo "<img src='../users/images/products/$record2->image' class='img-responsive center-block'/>";
+					?>
+				</div>
 				<p class="price_product">Cena: <s><?php echo $record2->price; ?></s>zł</p>
 				<p class="price_product">Akktualna cena: <?php echo $record2->price_after_discount; ?>zł</p>
 				<div class="btn-group" id="button-group">
@@ -51,9 +55,11 @@ function products_view_LoggedIn($result, $userID, $db)
 	?>
 			<div class="col-12 col-md-4">
 				<h3 class="title_product"><?php echo $record->name; ?></h3>
-				<?php
-					echo "<img src='../users/images/products/$record->image' class='img-responsive center-block'/>";
-				?>
+				<div class="thumbnails">
+					<?php
+						echo "<img src='../users/images/products/$record->image' class='img-responsive center-block'/>";
+					?>
+				</div>
 				<p class="price_product">Cena: <?php echo $record->price; ?>zł</p>
 				<div class="btn-group" id="button-group">
 				    <a href="most.php?id=<?php echo $record->id; ?>"  class="btn btn-primary ">Szczegóły</a>
@@ -85,9 +91,11 @@ function products_view_promotion_LoggedIn($result, $userID, $db)
 	?>
 			<div class="col-12 col-md-4">
 				<h3 class="title_product"><?php echo $record2->name; ?></h3>
-				<?php
-					echo "<img src='../users/images/products/$record2->image' class='img-responsive center-block'/>";
-				?>
+				<div class="thumbnails">
+					<?php
+						echo "<img src='../users/images/products/$record2->image' class='img-responsive center-block'/>";
+					?>
+				</div>
 				<p class="price_product">Cena: <s><?php echo $record2->price; ?></s>zł</p>
 				<p class="price_product">Akktualna cena: <?php echo $record2->price_after_discount; ?>zł</p>
 				<div class="btn-group" id="button-group">
@@ -120,9 +128,13 @@ function products_view_LoggedIn_admin($result, $userID, $db)
 	?>
 			<div class="col-12 col-md-4">
 				<h3 class="title_product"><?php echo $record->name; ?></h3>
-				<?php
-					echo "<img src='../users/images/products/$record->image' class='img-responsive center-block'/>";
-				?>
+				<div class="thumbnails">
+					<div class="thumbnails">
+						<?php
+							echo "<img src='../users/images/products/$record->image' class='img-responsive center-block'/>";
+						?>
+					</div>
+				</div>
 				<p class="price_product">Cena: <?php echo $record->price; ?>zł</p>
 				<div class="btn-group" id="button-group">
 				    <a href="most.php?id=<?php echo $record->id; ?>"  class="btn btn-primary ">Szczegóły</a>
@@ -139,7 +151,7 @@ function products_view_LoggedIn_admin($result, $userID, $db)
 				?>
 					</form>
 					<a href="edit.php?id=<?php echo $record->id; ?>"  class="btn btn-success ">Edytuj</a>
-					<a href="users/Model/delete_product.php?id=<?php echo $record->id; ?>" type="button" class="btn btn-danger ">Usuń</a>
+					<a href="users/Model/delete_product.php?id=<?php echo $record->id; ?>" type="button" class="btn btn-danger " onclick="return one_delete_product()">Usuń</a>
 				</div>
 			</div>
 	<?php 
@@ -155,9 +167,11 @@ function products_view_promotion_LoggedIn_admin($result, $userID, $db)
 	?>
 			<div class="col-12 col-md-4">
 				<h3 class="title_product"><?php echo $record2->name; ?></h3>
-				<?php
-					echo "<img src='../users/images/products/$record2->image' class='img-responsive center-block'/>";
-				?>
+				<div class="thumbnails">
+					<?php
+						echo "<img src='../users/images/products/$record2->image' class='img-responsive center-block'/>";
+					?>
+				</div>
 				<p class="price_product">Cena: <s><?php echo $record2->price; ?></s>zł</p>
 				<p class="price_product">Akktualna cena: <?php echo $record2->price_after_discount; ?>zł</p>
 				<div class="btn-group" id="button-group">
@@ -174,7 +188,7 @@ function products_view_promotion_LoggedIn_admin($result, $userID, $db)
 					}
 				?>
 						<a href="edit.php?id=<?php echo $record2->id; ?>"  class="btn btn-success ">Edytuj</a>
-						<a href="users/Model/delete_product.php?id=<?php echo $record2->id; ?>"  class="btn btn-danger ">Usuń</a>
+						<a href="users/Model/delete_product.php?id=<?php echo $record2->id; ?>"  class="btn btn-danger" onclick="return one_delete_product()">Usuń</a>
 					</form>
 				</div>
 				<div class="btn-group" id="button-group">
@@ -270,18 +284,5 @@ function products_view_most_page_promotion_LoggedIn($result, $userID, $db)
 		
 }
 
-function confirm_dialog()
-{
-	?>
-	<script type="text/javascript"></script>
-		var dialog = confirm('czy napewno chcesz usunąć produkt?')
-		if (dialog) {
-		    window.location="users/Model/delete_product.php";
-		} else {
-		    return false;
-		}
-	</script>
 
-	<?php
-}
 ?>
