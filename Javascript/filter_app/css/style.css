@@ -1,0 +1,31 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+#formWojewodztwo
+{
+	margin: 10px;
+}
+#filtrWojewodztw
+{
+	padding: 10px;
+	width: 130px;
+}
+.filtry
+{
+	margin: 5px 0px;
+}
+#table_wojewodztwa
+{
+	margin: 10px;
+	border: 1px solid;
+	padding: 10px;
+	text-align: left;
+}
+.record
+{
+	padding-right: 40px;
+}
